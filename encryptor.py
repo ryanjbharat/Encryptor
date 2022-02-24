@@ -10,8 +10,8 @@ def get_arguments():
 
     parser.add_argument('-help', action="help")
 
-    parser.add_argument("--encrypt", "-e", action='store_true', help="encrypt the data")
-    parser.add_argument("--decrypt", "-d", action='store_true', help="decrypt the data")
+    parser.add_argument("--encrypt", "-e", action='store_true', help="Encrypts the data provided! You will not have to worry about anyone snooping on you anymore...")
+    parser.add_argument("--decrypt", "-d", action='store_true', help="NEW! Use this to decrypt the data. Still in testing. Make sure you have supplied properly encoded data before attempting OR program will crash.")
     parser.add_argument("scheme", choices=(["base64"]), type=str, help="base64: In computer "
                                                                        "programming, Base64 is a group of "
                                                                        "binary-to-text encoding schemes that "
