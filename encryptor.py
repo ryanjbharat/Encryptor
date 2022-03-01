@@ -1,5 +1,6 @@
 import base64
 import argparse
+import time
 
 def get_arguments():
     """ Parses the arguments provided by user. """
@@ -42,8 +43,15 @@ def decryption(input, scheme):
 
 
 def requestHockeyLine():
-    return "Hockey line data"
+    with open("OTBMicro.txt", "w") as outfile:
+        outfile.write("start")
+    time.sleep(10)
+    hockey_data = ""
+    with open("OTBMicro.txt", "r") as infile:
+        for line in infile:
+            hockey_data += line
 
+    return hockey_data
 
 def main():
     args = get_arguments()
